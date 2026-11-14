@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://j0mvh0r4ca0f"]
+
+[ext_resource type="Texture2D" uid="uid://ceg2ewb4jemey" path="res://icon.svg" id="1_ld8cv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6b6ay"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46l3h"]
+size = Vector2(128, 128)
+
+[node name="platform preset 4" type="Node2D" unique_id=550973212]
+
+[node name="inviz wall 1" type="StaticBody2D" parent="." unique_id=2061500641]
+position = Vector2(-1261, 0)
+scale = Vector2(1.0042268, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inviz wall 1" unique_id=79671733]
+scale = Vector2(5.13944, 1022.9953)
+shape = SubResource("RectangleShape2D_6b6ay")
+
+[node name="inviz wall 2" type="StaticBody2D" parent="." unique_id=1957917303]
+position = Vector2(1246.9999, 0)
+scale = Vector2(1.0042268, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="inviz wall 2" unique_id=2032634468]
+scale = Vector2(5.13944, 1022.9953)
+shape = SubResource("RectangleShape2D_6b6ay")
+
+[node name="platform" type="StaticBody2D" parent="." unique_id=1209412706]
+position = Vector2(7.275958e-12, 472)
+scale = Vector2(3.4676754, 0.35817006)
+
+[node name="Sprite2D" type="Sprite2D" parent="platform" unique_id=940638222]
+texture = ExtResource("1_ld8cv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform" unique_id=1366546304]
+shape = SubResource("RectangleShape2D_46l3h")
+one_way_collision = true
+
+[node name="platform green" type="StaticBody2D" parent="." unique_id=1668471658]
+position = Vector2(750, -1097.9999)
+rotation = 0.00022618055
+scale = Vector2(3.4676754, 0.35817)
+
+[node name="Sprite2D" type="Sprite2D" parent="platform green" unique_id=1123762807]
+modulate = Color(0, 1, 0, 1)
+texture = ExtResource("1_ld8cv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform green" unique_id=1001994963]
+shape = SubResource("RectangleShape2D_46l3h")
+one_way_collision = true
+
+[node name="platform evil" type="StaticBody2D" parent="." unique_id=1447036755]
+position = Vector2(222.00005, -209)
+scale = Vector2(3.4676754, 0.35817006)
+
+[node name="Sprite2D" type="Sprite2D" parent="platform evil" unique_id=1932611117]
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("1_ld8cv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform evil" unique_id=767255596]
+shape = SubResource("RectangleShape2D_46l3h")
+one_way_collision = true
+
+[node name="platform2" type="StaticBody2D" parent="." unique_id=1126745184]
+position = Vector2(-222.00002, -1615.9999)
+scale = Vector2(3.4676754, 0.35817006)
+
+[node name="Sprite2D" type="Sprite2D" parent="platform2" unique_id=1088644873]
+texture = ExtResource("1_ld8cv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform2" unique_id=1810419264]
+shape = SubResource("RectangleShape2D_46l3h")
+one_way_collision = true
+
+[node name="platform green2" type="StaticBody2D" parent="." unique_id=1157579795]
+position = Vector2(-606, -1006.0001)
+rotation = 0.00022618055
+scale = Vector2(3.4676754, 0.35817)
+
+[node name="Sprite2D" type="Sprite2D" parent="platform green2" unique_id=1074734033]
+modulate = Color(0, 1, 0, 1)
+texture = ExtResource("1_ld8cv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform green2" unique_id=247729744]
+shape = SubResource("RectangleShape2D_46l3h")
+one_way_collision = true
+
+[node name="platform evil2" type="StaticBody2D" parent="." unique_id=1322014912]
+position = Vector2(-606.00006, -491.99994)
+scale = Vector2(3.4676754, 0.35817006)
+
+[node name="Sprite2D" type="Sprite2D" parent="platform evil2" unique_id=1103841450]
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("1_ld8cv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform evil2" unique_id=570850745]
+shape = SubResource("RectangleShape2D_46l3h")
+one_way_collision = true
