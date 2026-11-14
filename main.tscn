@@ -1,22 +1,24 @@
 [gd_scene format=3 uid="uid://b5tpuvthm4toa"]
 
 [ext_resource type="Texture2D" uid="uid://bjwc3ujx5cxb1" path="res://assets/images/player/foka.png" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://ceg2ewb4jemey" path="res://icon.svg" id="2_0xm2m"]
 
 [sub_resource type="GDScript" id="GDScript_ul3f0"]
 script/source = "extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const BOUNCE_VELOCITY = -1500.0
 
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	
+	if not is_on_floor():
+		velocity += get_gravity() * 2 * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	if is_on_floor():
+		velocity.y = BOUNCE_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -27,10 +29,14 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
 "
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3expe"]
-size = Vector2(339, 305)
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
+radius = 97.26767
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ul3f0"]
+size = Vector2(128, 128)
 
 [node name="main" type="Node2D" unique_id=1014547776]
 
@@ -38,7 +44,49 @@ size = Vector2(339, 305)
 script = SubResource("GDScript_ul3f0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=358723668]
-shape = SubResource("RectangleShape2D_3expe")
+position = Vector2(15, 13)
+shape = SubResource("CircleShape2D_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1009971158]
 texture = ExtResource("1_ig7tw")
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=805393943]
+scale = Vector2(1.972606, 1.0201843)
+zoom = Vector2(0.5, 0.5)
+position_smoothing_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2136253114]
+position = Vector2(1.8189894e-12, 225.99997)
+scale = Vector2(3.4676754, 0.35817006)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1104533673]
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1545763480]
+shape = SubResource("RectangleShape2D_ul3f0")
+one_way_collision = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1381303860]
+position = Vector2(422, -237)
+rotation = 0.00022618056
+scale = Vector2(3.4676754, 0.35817006)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=863123527]
+modulate = Color(0, 1, 0, 1)
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=692958686]
+shape = SubResource("RectangleShape2D_ul3f0")
+one_way_collision = true
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=492557050]
+position = Vector2(-3.637979e-12, -667)
+scale = Vector2(3.4676754, 0.35817006)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3" unique_id=254258663]
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1849909525]
+shape = SubResource("RectangleShape2D_ul3f0")
+one_way_collision = true
