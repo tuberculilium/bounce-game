@@ -1,3 +1,44 @@
 [gd_scene format=3 uid="uid://b5tpuvthm4toa"]
 
+[ext_resource type="Texture2D" uid="uid://bjwc3ujx5cxb1" path="res://assets/images/player/foka.png" id="1_ig7tw"]
+
+[sub_resource type="GDScript" id="GDScript_ul3f0"]
+script/source = "extends CharacterBody2D
+
+
+const SPEED = 300.0
+const JUMP_VELOCITY = -400.0
+
+
+func _physics_process(delta: float) -> void:
+	# Add the gravity.
+	
+
+	# Handle jump.
+	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+
+	# Get the input direction and handle the movement/deceleration.
+	# As good practice, you should replace UI actions with custom gameplay actions.
+	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	move_and_slide()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3expe"]
+size = Vector2(339, 305)
+
 [node name="main" type="Node2D" unique_id=1014547776]
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=968178192]
+script = SubResource("GDScript_ul3f0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=358723668]
+shape = SubResource("RectangleShape2D_3expe")
+
+[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1009971158]
+texture = ExtResource("1_ig7tw")
