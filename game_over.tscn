@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bg0tnbjy4esvr"]
 
-[ext_resource type="Texture2D" uid="uid://ceg2ewb4jemey" path="res://icon.svg" id="1_y26ei"]
+[ext_resource type="Texture2D" uid="uid://d25bxqxyhlj4f" path="res://assets/images/Untitled563_20261115114640.png" id="1_ccer4"]
+[ext_resource type="Texture2D" uid="uid://jri4uskp4g85" path="res://assets/images/Untitled558_20261114201654.png" id="1_y26ei"]
+[ext_resource type="Texture2D" uid="uid://cb2ltfseu72g5" path="res://assets/images/bounce back.png" id="2_8u835"]
+[ext_resource type="AudioStream" uid="uid://b4n655isuta58" path="res://assets/audio/Drum_Machine.wav" id="4_8u835"]
 
 [sub_resource type="GDScript" id="GDScript_272bh"]
 script/source = "extends Control
@@ -21,26 +24,32 @@ offset_right = 616.0
 offset_bottom = 364.0
 script = SubResource("GDScript_272bh")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=192536382]
+stream = ExtResource("4_8u835")
+autoplay = true
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=742270283]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=861529952]
+offset_left = 117.00001
+offset_top = 17.0
+offset_right = 1382.0
+offset_bottom = 364.0
+scale = Vector2(0.7239052, 0.7239052)
+texture = ExtResource("1_ccer4")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1373162187]
 offset_left = 303.0
-offset_top = 296.0
+offset_top = 327.0
 offset_right = 810.0
-offset_bottom = 468.0
-
-[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=1046728742]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0, 0, 1)
-theme_override_font_sizes/font_size = 100
-text = "game over"
+offset_bottom = 499.0
 
 [node name="restart" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=2129334692]
 layout_mode = 2
-text = "retry"
+icon = ExtResource("2_8u835")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=767202747]
-scale = Vector2(10, 10)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_y26ei")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1090333523]

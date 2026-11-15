@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://lf656owae26k" path="res://pause_menu.tscn" id="3_h2yge"]
 [ext_resource type="AudioStream" uid="uid://b3dfa7nlw4ekl" path="res://assets/audio/New_Project.wav" id="4_272bh"]
 [ext_resource type="Texture2D" uid="uid://ddi8h1gkyrnrj" path="res://assets/images/góey.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://cbenw4edcop2l" path="res://assets/images/fog.png" id="8_5vw27"]
 
 [sub_resource type="GDScript" id="GDScript_na63q"]
 resource_name = "Preload"
@@ -102,7 +103,7 @@ func _physics_process(delta: float) -> void:
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgotj"]
-size = Vector2(28, 28)
+size = Vector2(185.7351, 556.14014)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ocdgv"]
 size = Vector2(10, 12)
@@ -266,7 +267,6 @@ anchors_preset = 15
 
 [node name="fire wall" type="AnimatableBody2D" parent="." unique_id=633776273]
 position = Vector2(15.000002, 1800)
-scale = Vector2(66.7592, 10.123098)
 sync_to_physics = false
 script = SubResource("GDScript_272bh")
 speed = 200.0
@@ -275,18 +275,15 @@ speed = 200.0
 scale = Vector2(1.4337196, 1.4185568)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fire wall/k i l l" unique_id=1393470005]
-scale = Vector2(1.0797199, 1.063484)
+position = Vector2(-11.508615, 321.10095)
+scale = Vector2(12.351101, 1.063484)
 shape = SubResource("RectangleShape2D_hgotj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fire wall" unique_id=1617943748]
 scale = Vector2(1.7440522, 1.7085245)
 shape = SubResource("RectangleShape2D_ocdgv")
 
-[node name="ColorRect" type="ColorRect" parent="fire wall/CollisionShape2D" unique_id=1731034599]
-offset_left = -19.874342
-offset_top = -16.131311
-offset_right = 20.125658
-offset_bottom = 23.868689
-color = Color(1, 0, 0, 1)
+[node name="fog" type="Sprite2D" parent="fire wall/CollisionShape2D" unique_id=1749095105]
+texture = ExtResource("8_5vw27")
 
 [connection signal="body_entered" from="fire wall/k i l l" to="." method="_on_kill_body_entered"]

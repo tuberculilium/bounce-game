@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://lf656owae26k"]
 
 [ext_resource type="Shader" uid="uid://dok8vp2a2axv4" path="res://pause_menu.gdshader" id="1_hdmo1"]
+[ext_resource type="Texture2D" uid="uid://b4wlx5d4etsyc" path="res://assets/images/wznow.png" id="2_p81d2"]
+[ext_resource type="Texture2D" uid="uid://cb2ltfseu72g5" path="res://assets/images/bounce back.png" id="3_2nc7s"]
+[ext_resource type="Texture2D" uid="uid://4x03u2c665lr" path="res://assets/images/Untitled558_20261114202130.png" id="3_p81d2"]
 
 [sub_resource type="GDScript" id="GDScript_hdmo1"]
 script/source = "extends Control
@@ -108,6 +111,7 @@ _data = {
 [node name="pause menu" type="Control" unique_id=333535769]
 process_mode = 3
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -125,27 +129,31 @@ scale = Vector2(8.448169, 3.1738188)
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=697561841]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 150.43416
-offset_top = 43.98494
-offset_right = 217.43416
-offset_bottom = 144.98494
-scale = Vector2(0.5924097, 0.40087953)
+offset_left = 89.32028
+offset_top = 15.905267
+offset_right = 689.3203
+offset_bottom = 398.90527
+scale = Vector2(0.25, 0.25)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1460857023]
 layout_mode = 2
 
 [node name="resume" type="Button" parent="PanelContainer/VBoxContainer" unique_id=655998805]
 layout_mode = 2
-text = "resume"
+icon = ExtResource("2_p81d2")
+icon_alignment = 1
 
 [node name="restart" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1865510394]
 layout_mode = 2
-text = "restart"
+icon = ExtResource("3_2nc7s")
+icon_alignment = 1
 
 [node name="quit" type="Button" parent="PanelContainer/VBoxContainer" unique_id=985565426]
 layout_mode = 2
-text = "quit
+text = "
 "
+icon = ExtResource("3_p81d2")
+icon_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1291851675]
 libraries/ = SubResource("AnimationLibrary_05uyy")
