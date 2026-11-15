@@ -26,7 +26,7 @@ scale = Vector2(5.13944, 1022.9953)
 shape = SubResource("RectangleShape2D_wrbxe")
 
 [node name="platform" type="StaticBody2D" parent="." unique_id=539461580]
-position = Vector2(3.0517578e-05, 489)
+position = Vector2(-6, -3)
 scale = Vector2(3.4676754, 0.35817006)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform" unique_id=1781557315]
@@ -37,7 +37,7 @@ shape = SubResource("RectangleShape2D_yjoj5")
 one_way_collision = true
 
 [node name="platform green" type="StaticBody2D" parent="." unique_id=435126725]
-position = Vector2(-683, -46.000027)
+position = Vector2(-659.00006, -290.99997)
 rotation = 0.00022618055
 scale = Vector2(3.4676754, 0.35817)
 
@@ -62,7 +62,7 @@ shape = SubResource("RectangleShape2D_yjoj5")
 one_way_collision = true
 
 [node name="platform2" type="StaticBody2D" parent="." unique_id=813438757]
-position = Vector2(-383.99994, -1734)
+position = Vector2(-5.999996, -2009)
 scale = Vector2(3.4676754, 0.35817006)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform2" unique_id=1909660762]

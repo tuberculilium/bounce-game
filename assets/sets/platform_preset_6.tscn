@@ -26,7 +26,7 @@ scale = Vector2(5.13944, 1022.9953)
 shape = SubResource("RectangleShape2D_6b6ay")
 
 [node name="platform" type="StaticBody2D" parent="." unique_id=817540187]
-position = Vector2(4.3368087e-19, 439)
+position = Vector2(2.5849394e-26, -3.0517578e-05)
 scale = Vector2(3.4676754, 0.35817006)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform" unique_id=1370478390]
@@ -37,7 +37,7 @@ shape = SubResource("RectangleShape2D_46l3h")
 one_way_collision = true
 
 [node name="platform green" type="StaticBody2D" parent="." unique_id=1032314113]
-position = Vector2(-290, -193.99998)
+position = Vector2(-464.00003, -512)
 rotation = 0.00022618055
 scale = Vector2(3.4676754, 0.35817)
 
@@ -50,7 +50,7 @@ shape = SubResource("RectangleShape2D_46l3h")
 one_way_collision = true
 
 [node name="platform evil" type="StaticBody2D" parent="." unique_id=196256899]
-position = Vector2(738, -1011)
+position = Vector2(632.00006, -1440)
 scale = Vector2(3.4676754, 0.35817006)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform evil" unique_id=2095129612]
@@ -62,7 +62,7 @@ shape = SubResource("RectangleShape2D_46l3h")
 one_way_collision = true
 
 [node name="platform2" type="StaticBody2D" parent="." unique_id=739126158]
-position = Vector2(-68.00001, -1368)
+position = Vector2(4.7683716e-07, -2000)
 scale = Vector2(3.4676754, 0.35817006)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform2" unique_id=425823335]
@@ -73,7 +73,7 @@ shape = SubResource("RectangleShape2D_46l3h")
 one_way_collision = true
 
 [node name="platform green2" type="StaticBody2D" parent="." unique_id=1601531891]
-position = Vector2(311, -609)
+position = Vector2(360.00003, -976)
 rotation = 0.00022618055
 scale = Vector2(3.4676754, 0.35817)
 
@@ -86,7 +86,7 @@ shape = SubResource("RectangleShape2D_46l3h")
 one_way_collision = true
 
 [node name="platform evil2" type="StaticBody2D" parent="." unique_id=263574797]
-position = Vector2(-583.00006, -737)
+position = Vector2(-640, -983.99994)
 scale = Vector2(3.4676754, 0.35817006)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform evil2" unique_id=1833435492]
