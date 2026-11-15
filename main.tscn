@@ -1,14 +1,27 @@
 [gd_scene format=3 uid="uid://b5tpuvthm4toa"]
 
 [ext_resource type="Texture2D" uid="uid://dqyo6g0e3jjx1" path="res://assets/images/góry2.png" id="1_7mycd"]
+[ext_resource type="Texture2D" uid="uid://dv31ckkgrlg4v" path="res://assets/images/niebo1.png" id="2_efxa6"]
 [ext_resource type="Texture2D" uid="uid://vfvthsivrmb8" path="res://assets/images/goryp2.png" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://ccp2cae1h6d56" path="res://assets/images/nebo2.png" id="2_ycdy4"]
 [ext_resource type="Texture2D" uid="uid://bv728c8o87mw8" path="res://assets/images/niebop1.png" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://b2qq2pf7a4xhb" path="res://assets/images/niebo spod.png" id="3_dg77c"]
 [ext_resource type="PackedScene" uid="uid://lf656owae26k" path="res://pause_menu.tscn" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://bm8xwlvf4rmdf" path="res://assets/images/zachod spod.png" id="3_w48qg"]
 [ext_resource type="Texture2D" uid="uid://bjsftnwo4nlat" path="res://assets/images/player/foka.base.on.ground.png" id="4_5vw27"]
+[ext_resource type="Texture2D" uid="uid://cgec7tgh2kk2s" path="res://assets/images/zachod2.png" id="4_074og"]
 [ext_resource type="AudioStream" uid="uid://b3dfa7nlw4ekl" path="res://assets/audio/New_Project.wav" id="4_272bh"]
+[ext_resource type="Texture2D" uid="uid://c1t3wlfskw46l" path="res://assets/images/wieczor2.png" id="5_cegan"]
 [ext_resource type="Texture2D" uid="uid://dym3mflhy6co1" path="res://assets/images/player/foka.base.in.air.png" id="5_kek77"]
 [ext_resource type="Texture2D" uid="uid://ddi8h1gkyrnrj" path="res://assets/images/góey.png" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://dlyroyc8cxtww" path="res://assets/images/kosmos spod.png" id="5_ryguw"]
+[ext_resource type="Texture2D" uid="uid://c56wtgn6w1ksx" path="res://assets/images/wieczor1.png" id="6_82xsv"]
+[ext_resource type="Texture2D" uid="uid://brp7v0m1oqse8" path="res://assets/images/kosmos 1.png" id="6_d13ii"]
+[ext_resource type="Texture2D" uid="uid://c2327jrqlpacb" path="res://assets/images/kosmos 2.png" id="7_1u8w0"]
+[ext_resource type="Texture2D" uid="uid://cqujx2m3i5g1r" path="res://assets/images/wieczor spod.png" id="7_getpj"]
+[ext_resource type="Texture2D" uid="uid://cm4fjo0uabao1" path="res://assets/images/Untitled555_20261115122808.png" id="8_0odxb"]
 [ext_resource type="Texture2D" uid="uid://cbenw4edcop2l" path="res://assets/images/fog.png" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://c2uatockwueei" path="res://assets/images/zachod1.png" id="8_ryguw"]
 
 [sub_resource type="GDScript" id="GDScript_na63q"]
 resource_name = "Preload"
@@ -117,7 +130,7 @@ size = Vector2(10, 12)
 [node name="main" type="Node2D" unique_id=1014547776]
 script = SubResource("GDScript_na63q")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=646956625]
+[node name="gory2" type="TextureRect" parent="." unique_id=646956625]
 offset_left = -1722.0
 offset_top = -24831.0
 offset_right = -1161.0
@@ -125,6 +138,123 @@ offset_bottom = -22511.12
 scale = Vector2(6.261095, 6.261095)
 texture = ExtResource("1_7mycd")
 stretch_mode = 1
+
+[node name="niebo2" type="TextureRect" parent="." unique_id=1346282732]
+offset_left = -1722.0001
+offset_top = -51209.0
+offset_right = -1161.0001
+offset_bottom = -48889.117
+scale = Vector2(6.261095, 6.261095)
+texture = ExtResource("2_ycdy4")
+stretch_mode = 1
+
+[node name="zachod spod" type="TextureRect" parent="." unique_id=1138870668]
+offset_left = -1722.0
+offset_top = -61193.996
+offset_right = -1161.0
+offset_bottom = -58874.113
+scale = Vector2(6.261095, 6.261095)
+texture = ExtResource("3_w48qg")
+stretch_mode = 5
+
+[node name="zachod2" type="TextureRect" parent="." unique_id=821150604]
+offset_left = -1722.0
+offset_top = -85652.0
+offset_right = -1161.0
+offset_bottom = -83332.12
+scale = Vector2(6.261095, 6.261095)
+texture = ExtResource("4_074og")
+stretch_mode = 1
+
+[node name="kosmos spod" type="TextureRect" parent="." unique_id=1813267989]
+offset_left = -1722.0
+offset_top = -138392.0
+offset_right = -1161.0
+offset_bottom = -136072.13
+scale = Vector2(6.261095, 6.261095)
+texture = ExtResource("5_ryguw")
+stretch_mode = 5
+
+[node name="kosmos 1" type="TextureRect" parent="." unique_id=119875322]
+offset_left = -1722.0
+offset_top = -148314.0
+offset_right = -1161.0
+offset_bottom = -145994.13
+scale = Vector2(6.261095, 6.261095)
+texture = ExtResource("6_d13ii")
+stretch_mode = 1
+
+[node name="kosmos 2" type="TextureRect" parent="." unique_id=136302617]
+offset_left = -1722.0001
+offset_top = -162824.0
+offset_right = -1161.0001
+offset_bottom = -160504.13
+scale = Vector2(6.261095, 6.261095)
+texture = ExtResource("7_1u8w0")
+stretch_mode = 1
+
+[node name="noc spod" type="TextureRect" parent="." unique_id=1169206201]
+offset_left = -1722.0
+offset_top = -128422.01
+offset_right = 198.0
+offset_bottom = -125422.01
+scale = Vector2(4.713986, 3.550273)
+texture = ExtResource("8_0odxb")
+stretch_mode = 5
+
+[node name="wieczor2" type="TextureRect" parent="." unique_id=535470735]
+offset_left = -1722.0001
+offset_top = -118447.01
+offset_right = -1161.0001
+offset_bottom = -116127.125
+scale = Vector2(6.261095, 6.261095)
+texture = ExtResource("5_cegan")
+stretch_mode = 1
+
+[node name="wieczor1" type="TextureRect" parent="." unique_id=1177002915]
+offset_left = -1722.0001
+offset_top = -105148.0
+offset_right = -1161.0001
+offset_bottom = -102828.12
+scale = Vector2(6.261095, 6.261095)
+texture = ExtResource("6_82xsv")
+stretch_mode = 1
+
+[node name="wieczor spod" type="TextureRect" parent="." unique_id=903943545]
+offset_left = -1722.0
+offset_top = -95657.0
+offset_right = -1161.0
+offset_bottom = -93337.12
+scale = Vector2(6.261095, 6.261095)
+texture = ExtResource("7_getpj")
+stretch_mode = 5
+
+[node name="zachod1" type="TextureRect" parent="." unique_id=1411699425]
+offset_left = -1722.0
+offset_top = -71179.0
+offset_right = -1161.0
+offset_bottom = -68859.12
+scale = Vector2(6.261095, 6.261095)
+texture = ExtResource("8_ryguw")
+stretch_mode = 1
+
+[node name="niebo1" type="TextureRect" parent="." unique_id=2001512035]
+offset_left = -1722.0001
+offset_top = -41570.0
+offset_right = -1161.0001
+offset_bottom = -39250.117
+scale = Vector2(6.261095, 6.261095)
+texture = ExtResource("2_efxa6")
+stretch_mode = 1
+
+[node name="gory3" type="TextureRect" parent="." unique_id=1921699808]
+offset_left = -1722.0001
+offset_top = -34837.0
+offset_right = -1161.0001
+offset_bottom = -32517.117
+scale = Vector2(6.261095, 6.261095)
+texture = ExtResource("3_dg77c")
+stretch_mode = 5
 
 [node name="gory_1" type="TextureRect" parent="." unique_id=829155932]
 offset_left = -1722.0
@@ -192,7 +322,7 @@ shape = SubResource("RectangleShape2D_5d7yl")
 position = Vector2(15.000122, -1115)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform" unique_id=1104533673]
-modulate = Color(0, 0, 1, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(1, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("3_1bvp3")
@@ -206,7 +336,7 @@ position = Vector2(-622, -588)
 rotation = 0.00022618055
 
 [node name="Sprite2D" type="Sprite2D" parent="platform green" unique_id=665776459]
-modulate = Color(0, 1, 0, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("3_1bvp3")
@@ -220,7 +350,7 @@ one_way_collision = true
 position = Vector2(674.99994, -588)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform evil" unique_id=254258663]
-modulate = Color(1, 0, 0, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("3_1bvp3")
@@ -233,7 +363,7 @@ one_way_collision = true
 position = Vector2(-770, -1293.0001)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform2" unique_id=2140032590]
-modulate = Color(0, 0, 1, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(1, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("3_1bvp3")
@@ -247,7 +377,7 @@ position = Vector2(604.99976, -1395)
 rotation = 0.00022618055
 
 [node name="Sprite2D" type="Sprite2D" parent="platform green2" unique_id=1134796928]
-modulate = Color(0, 1, 0, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("3_1bvp3")
@@ -260,7 +390,7 @@ one_way_collision = true
 position = Vector2(-47.00035, -1601)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform evil2" unique_id=2043141344]
-modulate = Color(0, 0, 1, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(1, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("3_1bvp3")
@@ -272,7 +402,6 @@ one_way_collision = true
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1663571309]
 
 [node name="pause menu" parent="CanvasLayer" unique_id=333535769 instance=ExtResource("3_h2yge")]
-anchors_preset = 15
 
 [node name="fire wall" type="AnimatableBody2D" parent="." unique_id=633776273]
 position = Vector2(15.000002, 1800)

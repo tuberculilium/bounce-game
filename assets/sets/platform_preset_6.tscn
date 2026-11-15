@@ -29,7 +29,7 @@ shape = SubResource("RectangleShape2D_6b6ay")
 position = Vector2(2.5849394e-26, -3.0517578e-05)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform" unique_id=1336836277]
-modulate = Color(0, 0, 1, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_70rkd")
@@ -43,7 +43,7 @@ position = Vector2(-464.00003, -512)
 rotation = 0.00022618055
 
 [node name="Sprite2D" type="Sprite2D" parent="platform green" unique_id=1202407057]
-modulate = Color(0, 1, 0, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_70rkd")
@@ -57,7 +57,7 @@ one_way_collision = true
 position = Vector2(632.00006, -1440)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform evil" unique_id=1447050341]
-modulate = Color(1, 0, 0, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_70rkd")
@@ -70,7 +70,7 @@ one_way_collision = true
 position = Vector2(4.7683716e-07, -2000)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform2" unique_id=9446805]
-modulate = Color(0, 0, 1, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_70rkd")
@@ -84,7 +84,7 @@ position = Vector2(360.00003, -976)
 rotation = 0.00022618055
 
 [node name="Sprite2D" type="Sprite2D" parent="platform green2" unique_id=877672905]
-modulate = Color(0, 1, 0, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_70rkd")
@@ -98,7 +98,7 @@ one_way_collision = true
 position = Vector2(-184, -1233)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform evil2" unique_id=1052263713]
-modulate = Color(1, 0, 0, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_70rkd")

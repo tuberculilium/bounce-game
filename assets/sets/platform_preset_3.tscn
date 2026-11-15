@@ -29,7 +29,7 @@ shape = SubResource("RectangleShape2D_6b6ay")
 position = Vector2(743, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform" unique_id=322494572]
-modulate = Color(0, 0, 1, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_dbica")
@@ -43,7 +43,7 @@ position = Vector2(748, -386.0001)
 rotation = 0.00022618055
 
 [node name="Sprite2D" type="Sprite2D" parent="platform green" unique_id=712667150]
-modulate = Color(0, 1, 0, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_dbica")
@@ -57,7 +57,7 @@ one_way_collision = true
 position = Vector2(-992, -1616)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform evil" unique_id=1942211154]
-modulate = Color(1, 0, 0, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_dbica")
@@ -70,7 +70,7 @@ one_way_collision = true
 position = Vector2(1e-45, -2000)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform2" unique_id=655965117]
-modulate = Color(0, 0, 1, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_dbica")
@@ -84,7 +84,7 @@ position = Vector2(-430.00006, -982)
 rotation = 0.00022618055
 
 [node name="Sprite2D" type="Sprite2D" parent="platform green2" unique_id=1502665497]
-modulate = Color(0, 1, 0, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_dbica")
@@ -95,10 +95,11 @@ shape = SubResource("RectangleShape2D_ul3f0")
 one_way_collision = true
 
 [node name="platform evil2" type="StaticBody2D" parent="." unique_id=189688740]
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(677.99994, -1499)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform evil2" unique_id=1453074942]
-modulate = Color(1, 0, 0, 1)
+modulate = Color(0.77254903, 0.8509804, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_dbica")
