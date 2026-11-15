@@ -26,9 +26,10 @@ scale = Vector2(5.13944, 1022.9953)
 shape = SubResource("RectangleShape2D_6b6ay")
 
 [node name="platform" type="StaticBody2D" parent="." unique_id=1413059361]
-position = Vector2(4.3368087e-19, 0)
+position = Vector2(743, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform" unique_id=322494572]
+modulate = Color(0, 0, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_dbica")
@@ -53,7 +54,7 @@ shape = SubResource("RectangleShape2D_ul3f0")
 one_way_collision = true
 
 [node name="platform evil" type="StaticBody2D" parent="." unique_id=1136142707]
-position = Vector2(-362.0001, -739)
+position = Vector2(-992, -1616)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform evil" unique_id=1942211154]
 modulate = Color(1, 0, 0, 1)
@@ -69,6 +70,7 @@ one_way_collision = true
 position = Vector2(1e-45, -2000)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform2" unique_id=655965117]
+modulate = Color(0, 0, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_dbica")
@@ -78,7 +80,7 @@ shape = SubResource("RectangleShape2D_ul3f0")
 one_way_collision = true
 
 [node name="platform green2" type="StaticBody2D" parent="." unique_id=153004806]
-position = Vector2(-452, -1197)
+position = Vector2(-430.00006, -982)
 rotation = 0.00022618055
 
 [node name="Sprite2D" type="Sprite2D" parent="platform green2" unique_id=1502665497]

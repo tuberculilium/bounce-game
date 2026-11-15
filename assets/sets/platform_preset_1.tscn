@@ -26,9 +26,10 @@ scale = Vector2(5.13944, 1022.9953)
 shape = SubResource("RectangleShape2D_wrbxe")
 
 [node name="platform" type="StaticBody2D" parent="." unique_id=1237037447]
-position = Vector2(-6, -3)
+position = Vector2(729, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform" unique_id=280551956]
+modulate = Color(0, 0, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_f5j5u")
@@ -38,7 +39,7 @@ shape = SubResource("RectangleShape2D_ul3f0")
 one_way_collision = true
 
 [node name="platform green" type="StaticBody2D" parent="." unique_id=976375596]
-position = Vector2(-659.00006, -290.99997)
+position = Vector2(-864, -338.00003)
 rotation = 0.00022618055
 
 [node name="Sprite2D" type="Sprite2D" parent="platform green" unique_id=1078562577]
@@ -53,7 +54,7 @@ shape = SubResource("RectangleShape2D_ul3f0")
 one_way_collision = true
 
 [node name="platform evil" type="StaticBody2D" parent="." unique_id=296721356]
-position = Vector2(357.99985, -469)
+position = Vector2(933, -642)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform evil" unique_id=2140607538]
 modulate = Color(1, 0, 0, 1)
@@ -69,6 +70,7 @@ one_way_collision = true
 position = Vector2(-5.999996, -2009)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform2" unique_id=1960788280]
+modulate = Color(0, 0, 1, 1)
 position = Vector2(0, -15)
 scale = Vector2(0.65, 0.5)
 texture = ExtResource("1_f5j5u")
@@ -78,7 +80,7 @@ shape = SubResource("RectangleShape2D_ul3f0")
 one_way_collision = true
 
 [node name="platform green2" type="StaticBody2D" parent="." unique_id=1325131744]
-position = Vector2(209.00003, -1251.0001)
+position = Vector2(643, -1543)
 rotation = 0.00022618055
 
 [node name="Sprite2D" type="Sprite2D" parent="platform green2" unique_id=1025645082]
@@ -93,7 +95,7 @@ shape = SubResource("RectangleShape2D_ul3f0")
 one_way_collision = true
 
 [node name="platform evil2" type="StaticBody2D" parent="." unique_id=988644578]
-position = Vector2(-605.9999, -769)
+position = Vector2(-544, -1242)
 
 [node name="Sprite2D" type="Sprite2D" parent="platform evil2" unique_id=1582887954]
 modulate = Color(1, 0, 0, 1)
