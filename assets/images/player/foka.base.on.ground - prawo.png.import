@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjsftnwo4nlat"
-path="res://.godot/imported/foka.base.on.ground.png-4944653580dd61a5feb11fcdb3bfb3ca.ctex"
+uid="uid://6rkpv4g7la6x"
+path="res://.godot/imported/foka.base.on.ground - prawo.png-79fd0b7b6af32d919e11102d5fdd75cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/images/player/foka.base.on.ground.png"
-dest_files=["res://.godot/imported/foka.base.on.ground.png-4944653580dd61a5feb11fcdb3bfb3ca.ctex"]
+source_file="res://assets/images/player/foka.base.on.ground - prawo.png"
+dest_files=["res://.godot/imported/foka.base.on.ground - prawo.png-79fd0b7b6af32d919e11102d5fdd75cb.ctex"]
 
 [params]
 
