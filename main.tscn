@@ -13,6 +13,8 @@
 [ext_resource type="AudioStream" uid="uid://b3dfa7nlw4ekl" path="res://assets/audio/New_Project.wav" id="4_272bh"]
 [ext_resource type="Texture2D" uid="uid://c1t3wlfskw46l" path="res://assets/images/wieczor2.png" id="5_cegan"]
 [ext_resource type="Texture2D" uid="uid://dym3mflhy6co1" path="res://assets/images/player/foka.base.in.air.png" id="5_kek77"]
+[ext_resource type="Texture2D" uid="uid://6rkpv4g7la6x" path="res://assets/images/player/foka.base.on.ground - prawo.png" id="4_5vw27"]
+[ext_resource type="AudioStream" uid="uid://b3dfa7nlw4ekl" path="res://assets/audio/New_Project.wav" id="4_272bh"]
 [ext_resource type="Texture2D" uid="uid://ddi8h1gkyrnrj" path="res://assets/images/góey.png" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://dlyroyc8cxtww" path="res://assets/images/kosmos spod.png" id="5_ryguw"]
 [ext_resource type="Texture2D" uid="uid://c56wtgn6w1ksx" path="res://assets/images/wieczor1.png" id="6_82xsv"]
