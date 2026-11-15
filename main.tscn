@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://b5tpuvthm4toa"]
 
 [ext_resource type="Texture2D" uid="uid://dqyo6g0e3jjx1" path="res://assets/images/góry2.png" id="1_7mycd"]
-[ext_resource type="Texture2D" uid="uid://bjwc3ujx5cxb1" path="res://assets/images/player/foka.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://vfvthsivrmb8" path="res://assets/images/goryp2.png" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://bv728c8o87mw8" path="res://assets/images/niebop1.png" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://lf656owae26k" path="res://pause_menu.tscn" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://bjsftnwo4nlat" path="res://assets/images/player/foka.base.on.ground.png" id="4_5vw27"]
 [ext_resource type="AudioStream" uid="uid://b3dfa7nlw4ekl" path="res://assets/audio/New_Project.wav" id="4_272bh"]
+[ext_resource type="Texture2D" uid="uid://dym3mflhy6co1" path="res://assets/images/player/foka.base.in.air.png" id="5_kek77"]
 [ext_resource type="Texture2D" uid="uid://ddi8h1gkyrnrj" path="res://assets/images/góey.png" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://cbenw4edcop2l" path="res://assets/images/fog.png" id="8_5vw27"]
 
@@ -79,6 +80,11 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
+func _process(_float):
+	if is_on_floor():
+		$Sprite2D.show(); $Sprite2D2.hide()
+	else:
+		$Sprite2D.hide(); $Sprite2D2.show()
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
@@ -135,9 +141,6 @@ script = SubResource("GDScript_ul3f0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=358723668]
 shape = SubResource("CircleShape2D_0xm2m")
 
-[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1009971158]
-texture = ExtResource("1_ig7tw")
-
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=805393943]
 position = Vector2(14.999999, 0)
 scale = Vector2(1.972606, 1.0201843)
@@ -149,6 +152,12 @@ position_smoothing_enabled = true
 [node name="gameplay music" type="AudioStreamPlayer2D" parent="player" unique_id=1501764555]
 stream = ExtResource("4_272bh")
 autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1910108190]
+texture = ExtResource("4_5vw27")
+
+[node name="Sprite2D2" type="Sprite2D" parent="player" unique_id=610244322]
+texture = ExtResource("5_kek77")
 
 [node name="starting platform" type="StaticBody2D" parent="." unique_id=1199481026]
 position = Vector2(0, 305)
