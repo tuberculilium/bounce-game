@@ -40,6 +40,14 @@ func spawn_next_set() -> void:
 	add_child(set_instance)
 
 	next_spawn_y -=1500
+
+func game_over():
+	
+	get_tree().change_scene_to_file(\"res://game_over.tscn\")
+	
+func _on_kill_body_entered(body):
+	if body.name == \"player\":
+		game_over()
 "
 
 [sub_resource type="GDScript" id="GDScript_ul3f0"]
@@ -70,9 +78,6 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-#func _on_kill_body_entered(body: Node2D) -> void:
-	#if body.name == \"player\":
-#get_tree().reload_current_scene()
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
@@ -244,11 +249,14 @@ one_way_collision = true
 position = Vector2(373, 0)
 
 [node name="k i l l" type="Area2D" parent="fire wall" unique_id=207155032]
+scale = Vector2(1.4337196, 1.4185568)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fire wall/k i l l" unique_id=896136259]
+scale = Vector2(1.0797199, 1.063484)
 shape = SubResource("RectangleShape2D_hgotj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fire wall" unique_id=1926771922]
+scale = Vector2(1.7440522, 1.7085245)
 shape = SubResource("RectangleShape2D_ocdgv")
 
 [node name="Sprite2D" type="Sprite2D" parent="fire wall" unique_id=1480821254]

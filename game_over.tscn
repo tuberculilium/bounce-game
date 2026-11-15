@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://bg0tnbjy4esvr"]
+
+[ext_resource type="Texture2D" uid="uid://ceg2ewb4jemey" path="res://icon.svg" id="1_y26ei"]
+
+[sub_resource type="GDScript" id="GDScript_272bh"]
+script/source = "extends Control
+
+
+
+
+func _on_restart_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://main.tscn\")
+"
+
+[node name="game over" type="Control" unique_id=539318741]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 576.0
+offset_top = 324.0
+offset_right = 616.0
+offset_bottom = 364.0
+script = SubResource("GDScript_272bh")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=742270283]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1373162187]
+offset_left = 303.0
+offset_top = 296.0
+offset_right = 810.0
+offset_bottom = 468.0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer" unique_id=1046728742]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "game over"
+
+[node name="restart" type="Button" parent="CanvasLayer/VBoxContainer" unique_id=2129334692]
+layout_mode = 2
+text = "retry"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=767202747]
+scale = Vector2(10, 10)
+texture = ExtResource("1_y26ei")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1090333523]
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/restart" to="." method="_on_restart_pressed"]
