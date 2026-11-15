@@ -4,9 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://vfvthsivrmb8" path="res://assets/images/goryp2.png" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://bv728c8o87mw8" path="res://assets/images/niebop1.png" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://lf656owae26k" path="res://pause_menu.tscn" id="3_h2yge"]
-[ext_resource type="Texture2D" uid="uid://bjsftnwo4nlat" path="res://assets/images/player/foka.base.on.ground.png" id="4_5vw27"]
+[ext_resource type="Texture2D" uid="uid://6rkpv4g7la6x" path="res://assets/images/player/foka.base.on.ground - prawo.png" id="4_5vw27"]
 [ext_resource type="AudioStream" uid="uid://b3dfa7nlw4ekl" path="res://assets/audio/New_Project.wav" id="4_272bh"]
-[ext_resource type="Texture2D" uid="uid://dym3mflhy6co1" path="res://assets/images/player/foka.base.in.air.png" id="5_kek77"]
 [ext_resource type="Texture2D" uid="uid://ddi8h1gkyrnrj" path="res://assets/images/góey.png" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://cbenw4edcop2l" path="res://assets/images/fog.png" id="8_5vw27"]
 
@@ -45,7 +44,7 @@ func spawn_next_set() -> void:
 
 func game_over():
 	
-	get_tree().change_scene_to_file(\"res://game_over.tscn\")
+	get_tree().change_scene_to_file.call_deferred(\"res://game_over.tscn\")
 	
 func _on_kill_body_entered(body):
 	if body.name == \"player\":
@@ -58,6 +57,8 @@ script/source = "extends CharacterBody2D
 const SPEED = 500.0
 const JUMP_VELOCITY = -2200.0
 var DOUBLE_JUMPED := true
+@export var sprite_2d: Sprite2D
+
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -75,6 +76,7 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis(\"ui_left\", \"ui_right\")
 	if direction:
 		velocity.x = direction * SPEED
+		sprite_2d.scale.x = direction
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
@@ -130,8 +132,9 @@ scale = Vector2(6.264526, 6.15612)
 texture = ExtResource("5_lquwl")
 stretch_mode = 1
 
-[node name="player" type="CharacterBody2D" parent="." unique_id=968178192]
+[node name="player" type="CharacterBody2D" parent="." unique_id=968178192 node_paths=PackedStringArray("sprite_2d")]
 script = SubResource("GDScript_ul3f0")
+sprite_2d = NodePath("Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=358723668]
 shape = SubResource("CircleShape2D_0xm2m")
@@ -150,9 +153,6 @@ autoplay = true
 
 [node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1910108190]
 texture = ExtResource("4_5vw27")
-
-[node name="Sprite2D2" type="Sprite2D" parent="player" unique_id=610244322]
-texture = ExtResource("5_kek77")
 
 [node name="starting platform" type="StaticBody2D" parent="." unique_id=1199481026]
 position = Vector2(0, 305)
