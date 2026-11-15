@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://dqyo6g0e3jjx1" path="res://assets/images/góry2.png" id="1_7mycd"]
 [ext_resource type="Texture2D" uid="uid://bjwc3ujx5cxb1" path="res://assets/images/player/foka.png" id="1_ig7tw"]
-[ext_resource type="Texture2D" uid="uid://ceg2ewb4jemey" path="res://icon.svg" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://vfvthsivrmb8" path="res://assets/images/goryp2.png" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://bv728c8o87mw8" path="res://assets/images/niebop1.png" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://lf656owae26k" path="res://pause_menu.tscn" id="3_h2yge"]
@@ -90,6 +89,16 @@ size = Vector2(2087.0005, 289.00012)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ul3f0"]
 size = Vector2(400, 51)
+
+[sub_resource type="GDScript" id="GDScript_272bh"]
+script/source = "extends AnimatableBody2D
+
+@export var speed: float = 150.0
+@export var direction: Vector2 = Vector2.UP
+
+func _physics_process(delta: float) -> void:
+	position += direction.normalized() * speed * delta
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hgotj"]
 size = Vector2(28, 28)
@@ -245,27 +254,34 @@ texture = ExtResource("3_1bvp3")
 shape = SubResource("RectangleShape2D_ul3f0")
 one_way_collision = true
 
-[node name="fire wall" type="StaticBody2D" parent="." unique_id=1574131090]
-position = Vector2(373, 0)
-
-[node name="k i l l" type="Area2D" parent="fire wall" unique_id=207155032]
-scale = Vector2(1.4337196, 1.4185568)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fire wall/k i l l" unique_id=896136259]
-scale = Vector2(1.0797199, 1.063484)
-shape = SubResource("RectangleShape2D_hgotj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fire wall" unique_id=1926771922]
-scale = Vector2(1.7440522, 1.7085245)
-shape = SubResource("RectangleShape2D_ocdgv")
-
-[node name="Sprite2D" type="Sprite2D" parent="fire wall" unique_id=1480821254]
-scale = Vector2(0.1953495, 0.19318713)
-texture = ExtResource("2_0xm2m")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1663571309]
 
 [node name="pause menu" parent="CanvasLayer" unique_id=333535769 instance=ExtResource("3_h2yge")]
 anchors_preset = 15
+
+[node name="fire wall" type="AnimatableBody2D" parent="." unique_id=633776273]
+position = Vector2(15.000002, 1800)
+scale = Vector2(66.7592, 10.123098)
+sync_to_physics = false
+script = SubResource("GDScript_272bh")
+speed = 200.0
+
+[node name="k i l l" type="Area2D" parent="fire wall" unique_id=1293406409]
+scale = Vector2(1.4337196, 1.4185568)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fire wall/k i l l" unique_id=1393470005]
+scale = Vector2(1.0797199, 1.063484)
+shape = SubResource("RectangleShape2D_hgotj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fire wall" unique_id=1617943748]
+scale = Vector2(1.7440522, 1.7085245)
+shape = SubResource("RectangleShape2D_ocdgv")
+
+[node name="ColorRect" type="ColorRect" parent="fire wall/CollisionShape2D" unique_id=1731034599]
+offset_left = -19.874342
+offset_top = -16.131311
+offset_right = 20.125658
+offset_bottom = 23.868689
+color = Color(1, 0, 0, 1)
 
 [connection signal="body_entered" from="fire wall/k i l l" to="." method="_on_kill_body_entered"]
