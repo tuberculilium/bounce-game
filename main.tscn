@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bjwc3ujx5cxb1" path="res://assets/images/player/foka.png" id="1_ig7tw"]
 [ext_resource type="Texture2D" uid="uid://ceg2ewb4jemey" path="res://icon.svg" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://lf656owae26k" path="res://pause_menu.tscn" id="3_h2yge"]
 
 [sub_resource type="GDScript" id="GDScript_na63q"]
 resource_name = "Preload"
@@ -65,6 +66,9 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
+#func _on_kill_body_entered(body: Node2D) -> void:
+	#if body.name == \"player\":
+#get_tree().reload_current_scene()
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
@@ -77,7 +81,11 @@ radius = 97.26767
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ul3f0"]
 size = Vector2(128, 128)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_feecd"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgotj"]
+size = Vector2(28, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ocdgv"]
+size = Vector2(10, 12)
 
 [node name="main" type="Node2D" unique_id=1014547776]
 script = SubResource("GDScript_na63q")
@@ -201,12 +209,24 @@ texture = ExtResource("2_0xm2m")
 shape = SubResource("RectangleShape2D_ul3f0")
 one_way_collision = true
 
-[node name="fire wall" type="StaticBody2D" parent="." unique_id=360732772]
-position = Vector2(0, 979)
-scale = Vector2(20.341997, 3.2867346)
+[node name="fire wall" type="StaticBody2D" parent="." unique_id=1574131090]
+position = Vector2(373, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="fire wall" unique_id=1646504291]
-shape = SubResource("RectangleShape2D_feecd")
+[node name="k i l l" type="Area2D" parent="fire wall" unique_id=207155032]
 
-[node name="Sprite2D" type="Sprite2D" parent="fire wall" unique_id=356883160]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fire wall/k i l l" unique_id=896136259]
+shape = SubResource("RectangleShape2D_hgotj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fire wall" unique_id=1926771922]
+shape = SubResource("RectangleShape2D_ocdgv")
+
+[node name="Sprite2D" type="Sprite2D" parent="fire wall" unique_id=1480821254]
+scale = Vector2(0.1953495, 0.19318713)
 texture = ExtResource("2_0xm2m")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1663571309]
+
+[node name="pause menu" parent="CanvasLayer" unique_id=333535769 instance=ExtResource("3_h2yge")]
+anchors_preset = 15
+
+[connection signal="body_entered" from="fire wall/k i l l" to="." method="_on_kill_body_entered"]
