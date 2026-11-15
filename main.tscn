@@ -80,11 +80,6 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-func _process(_float):
-	if is_on_floor():
-		$Sprite2D.show(); $Sprite2D2.hide()
-	else:
-		$Sprite2D.hide(); $Sprite2D2.show()
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0xm2m"]
@@ -272,7 +267,6 @@ one_way_collision = true
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1663571309]
 
 [node name="pause menu" parent="CanvasLayer" unique_id=333535769 instance=ExtResource("3_h2yge")]
-anchors_preset = 15
 
 [node name="fire wall" type="AnimatableBody2D" parent="." unique_id=633776273]
 position = Vector2(15.000002, 1800)
